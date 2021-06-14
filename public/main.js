@@ -1,7 +1,7 @@
 const update = document.querySelector('#update-button');
 const deleteButton = document.querySelector('#delete-button');
 
-update.addEventListener('click', _ => {
+update.addEventListener('click', (_) => {
   fetch('/quotes', {
     method: 'put',
     headers: { 'Content-Type': 'application/json' },
@@ -10,17 +10,17 @@ update.addEventListener('click', _ => {
       quote: 'Votre manque de foi me consterne.',
     }),
   })
-    .then(res => {
+    .then((res) => {
       if (res.ok) return res.json();
     })
-    .then(response => {
-      window.location.reload(true);
+    .then((response) => {
+      window.location.reload();
     });
 });
 
-const messageDiv = document.querySelector("#message");
+const messageDiv = document.querySelector('#message');
 
-deleteButton.addEventListener('click', _ => {
+deleteButton.addEventListener('click', (_) => {
   fetch('/quotes', {
     method: 'delete',
     headers: { 'Content-Type': 'application/json' },
@@ -28,14 +28,14 @@ deleteButton.addEventListener('click', _ => {
       name: 'Dark Vador',
     }),
   })
-    .then(res => {
+    .then((res) => {
       if (res.ok) return res.json();
     })
-    .then(response => {
+    .then((response) => {
       if (response === 'Aucune citation à supprimer') {
         messageDiv.textContent = 'Aucune citation de Dark Vador à supprimer';
       } else {
-        window.location.reload(true);
+        window.location.reload();
       }
     })
     .catch(console.error);
