@@ -8,7 +8,3 @@ Fonctionnalités :
   - utilisation du Cloud Mongodb Atlas
   - cacher l'url de connexion à Mongodb grâce au module dotenv
   => On peut détourner l'application pour en faire une chatbox pour laisser des messages
-
-A venir : 
-  - modifier une citation de son choix
-  - supprimer une citation de son choix
