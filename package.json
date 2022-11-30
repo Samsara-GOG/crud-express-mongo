@@ -1,28 +1,24 @@
 {
-  "name": "crud-express-mongo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "nodemon server.js",
-    "dev2": "nodemon serverNativeDriver.js",
-    "dev3": "nodemon serverMongoose.js",
-    "sync": "node sync.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "dotenv": "^8.2.0",
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "mongodb": "^3.6.4",
-    "mongoose": "^5.11.18",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "rsync": "^0.6.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  }
+	"name": "crud-express-mongo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon server.js",
+		"dev2": "nodemon serverNativeDriver.js",
+		"dev3": "nodemon serverMongoose.js",
+		"sync": "node sync.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"dotenv": "^8.2.0",
+		"ejs": "^3.1.6",
+		"express": "^4.17.1",
+		"mongodb": "^3.6.4",
+		"mongoose": "^5.11.18"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.7"
+	}
 }
