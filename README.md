@@ -1,9 +1,9 @@
 # crud-express-mongo
 Petite application serveur de chat avec Node, Ejs, Express, et MongoDB
 
-- **Node et Express** pour mettre en place le serveur et l'API.  
-- **Ejs** pour le langage de template utilisé pour le rendu HTML à partir du JavaScript.  
-- **MongoDB** pour l'enregistrement et la récupération des données du CRUD.
+- **Node et Express** pour mettre en place le serveur et l'API,
+- **Ejs**, langage de template pour effectuer le rendu HTML,
+- **MongoDB** pour sauvegarder les messages du CRUD dans le Cloud.
 
 L'url de connexion à Mongodb est cachée grâce au module dotenv (dossier `secrets/.env` à la racine du projet) 
 
