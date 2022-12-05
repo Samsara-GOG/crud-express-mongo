@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App de citations sur Star Wars</title>
     <link rel="stylesheet" href="./style.css">
-</head>
+  </head>
+
   <body>
     <h1 data-position="header">Que Node et Express soient avec toi</h1>
 
     <section data-position="add-quote">
       <h2>Ajouter une citation</h2>
 
-        <form action="/quotes" method="POST">
-          <input type="text" placeholder="nom" name="name" />
-          <input type="text" placeholder="citation" name="quote" />
-          <button type="submit">Envoyer</button>
-        </form>
+      <form action="/quotes" method="POST">
+        <input type="text" placeholder="nom" name="name" />
+        <input type="text" placeholder="citation" name="quote" />
+        <button type="submit">Envoyer</button>
+      </form>
     </section>
 
     <section data-position="update-quote">
       <div>
-        <h2>Dark Vador débarque!</h2>
+        <h2>Dark Vador débarque !</h2>
         <p>
           Remplace la première citation de Yoda avec une citation de Dark Vador
         </p>
@@ -31,20 +33,20 @@
     </section>
 
     <section data-position="delete-quote">
-        <div>
-          <h2> Fais disparaître les paroles de Dark Vador! </h2>
-          <p>
-            Supprime une citation de Dark Vador. Ne fais rien s'il n'y en a plus.
-          </p>
-          <button id="delete-button"> Supprimer une citation de Dark Vador </button>
-        </div>
-        <div id="message"></div>
+      <div>
+        <h2> Fais disparaître les paroles de Dark Vador! </h2>
+        <p>
+          Supprime une citation de Dark Vador (Ne fais rien s'il n'y en a plus).
+        </p>
+        <button id="delete-button"> Supprimer une citation de Dark Vador </button>
+      </div>
+      <div id="message"></div>
     </section>
 
     <section data-position="quotes">
       <h2> Citations </h2>
       <ul class="quotes">
-        <% for(let i = 0; i < quotes.length; i++) {%>
+        <% for(let i=0; i < quotes.length; i++) {%>
           <li class="quote">
             <span>
               <strong>
@@ -60,4 +62,5 @@
     </section>
     <script src="/main.js"></script>
   </body>
+
 </html>

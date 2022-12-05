@@ -29,6 +29,8 @@ MongoClient.connect(connectionString, {
 		app.use(express.static('public'));
 
 		// Routes
+
+		// Récupérer tous les messages
 		app.get('/', (req, res) => {
 			db.collection('quotes')
 				.find()
@@ -39,6 +41,7 @@ MongoClient.connect(connectionString, {
 				.catch((error) => console.error(error));
 		});
 
+		// Créer un nouveau message
 		app.post('/quotes', (req, res) => {
 			quotesCollection
 				.insertOne(req.body)
@@ -48,6 +51,7 @@ MongoClient.connect(connectionString, {
 				.catch((error) => console.error(error));
 		});
 
+		// Modifier un message de l'utilisateur Yoda/yoda
 		app.put('/quotes', (req, res) => {
 			quotesCollection
 				.findOneAndUpdate(
@@ -66,6 +70,7 @@ MongoClient.connect(connectionString, {
 				.catch((error) => console.error(error));
 		});
 
+		// Supprimer un message de Dark Vador
 		app.delete('/quotes', (req, res) => {
 			quotesCollection
 				.deleteOne({ name: req.body.name })
@@ -78,7 +83,6 @@ MongoClient.connect(connectionString, {
 				.catch((error) => console.error(error));
 		});
 
-		// Listen
 		const isProduction = process.env.NODE_ENV === 'production';
 		const port = isProduction ? 7500 : 3000;
 		app.listen(port, () => {
